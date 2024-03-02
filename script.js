@@ -15,21 +15,23 @@ btnSubmit.onclick = function () {
     let rNum = gNum;
 
     if (count<3) {
-        disp.innerHTML = count;
+        attempts.innerHTML = count;
+        left.innerHTML = 3-count;
         
         let num = document.getElementById("inNum").value;
     
         if (rNum < num) {
-            alert("Guess a lesser number!");
+            message.innerHTML = "Guess a lesser number!";
         } else if (rNum > num) {
-            alert("Guess a higher number!");
+            message.innerHTML = "Guess a higher number!";
         } else {
-            alert("Congragulations! You Win!!");
+            message.innerHTML = "Congragulations! You Win!!";
             document.getElementById("btnSubmit").disabled = true;
         } 
     } else {
-        disp.innerHTML = count;
+        attempts.innerHTML = count;
+        left.innerHTML = 3-count;
         document.getElementById("btnSubmit").disabled = true;
-        alert("Maximum Number of Attempts Exceeded, the number is "+rNum);
+        message.innerHTML = "Maximum Number of Attempts Exceeded, the number is "+rNum;
     }
 }
