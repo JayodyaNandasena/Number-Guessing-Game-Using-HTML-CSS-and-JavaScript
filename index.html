@@ -10,9 +10,9 @@
     <title>Number Guessing Game</title>
 </head>
 
-<body onload="document.getElementById('inNum').value = ''">
+<body onload="document.getElementById('inNum').value = '0'">
     <form class="row g-3">
-        <div class="col-md-12">
+        <div class="col-md-12" id="instructions">
             <h3>Instructions</h3>
             <ul>
                 <li>The game selects a random number between 0 and 10.</li>
@@ -23,7 +23,7 @@
                 <li>Have fun and good luck!</li>
             </ul>
             <h4>Guess the number</h4>
-            <input type="number" class="form-control" id="inNum" required>
+            <input type="number" min="0" max="10" onkeydown="return false" class="form-control" id="inNum" onfocus="this.blur()" required>
         </div>
         <div class="col-md-12">
             <input type="button" id="btnSubmit" value="Submit" class="btn btn-primary">

@@ -7,6 +7,7 @@ body{
     background-image: url(assets/background1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    cursor: default;
 }
 
 form{
@@ -20,6 +21,7 @@ form{
 
 h4{
     font-weight: bolder;
+    cursor: default;
 }
 
 #message{
@@ -29,4 +31,15 @@ h4{
 
 #attempts, #left, #message{
     color: red;
+}
+
+#inNum{
+    cursor: not-allowed;
+}
+
+#btnSubmit:hover,
+#btnAgain:hover{
+    /* color: blue; */
+    background-color: #484685;
+    transition-duration: 0.5s;
 }
